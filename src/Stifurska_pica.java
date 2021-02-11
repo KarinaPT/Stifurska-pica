@@ -44,6 +44,25 @@ public class Stifurska_pica {
 			}
 			raksta.println("Klients lūdza parādīt menu:"+izvele);
 			
+			for(int i=1; i<=a; i++) {
+				picasnosaukums = JOptionPane.showInputDialog("Paskaties menu un ievadiet picas nosaukumu: ");
+				raksta.println("Picas nosaukums: "+picasnosaukums);
+				maksasanasveids = JOptionPane.showInputDialog("Apmaksas veids: (k - KARTE/ n - NAUDA)");
+				
+				k = maksasanasveids.charAt(0);
+				if (k == 'K' || k == 'k') {
+					
+			       System.out.println("Apmaksas veids: Karte");
+			       raksta.println("Apmaksas veids - Karte ");
+			       
+			    } else if (k == 'n' || k == 'N') {
+			    	
+			    	System.out.println("Apmaksas veids: Nauda");
+				    raksta.println("Apmaksas veids - Nauda ");
+				    
+			    }
+			}
+			raksta.close();
 			JOptionPane.showMessageDialog(null, "Teksts ir saglabāts!");
 	}catch(Exception e){
 		JOptionPane.showConfirmDialog(null, "Kļūme ierakstot failā!", "Kļūme!", JOptionPane.ERROR_MESSAGE);
