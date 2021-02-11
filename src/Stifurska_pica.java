@@ -65,19 +65,7 @@ public class Stifurska_pica {
 				atb = JOptionPane.showInputDialog("Vai vēlaties saņemt pasūtījumu uzvietas??");
 				atb = atb.toUpperCase();
 				
-				if(atb.equals("JA")) {
-					double summa = a*11.99;
-					System.out.println("Piegāde uzvietas");
-					System.out.println("Izmaksas: "+summa);
-					raksta.println("Pasūtījuma izmaksas: "+summa);
-					raksta.println("Piegāde uzvietas");
-				}else {
-					double summa = a*11.99+2.50;
-					System.out.println("Piegāde mājās");
-					System.out.println("Izmaksas: "+summa);
-					raksta.println("Pasūtījuma izmaksas: "+summa);
-					raksta.println("Piegāde mājās");
-			}
+				
 		}
 			raksta.close();
 			JOptionPane.showMessageDialog(null, "Teksts ir saglabāts!");
@@ -100,6 +88,102 @@ public class Stifurska_pica {
 	    vards = scan.next();
 	    System.out.print("Ievadi savu adrese: ");
 	    adress = scan.next();
+	    do {
+	    System.out.print("Ievadi savu talruni: ");
+	    talr = scan.next();
+	    }while(talr.length() < 8 ||talr.length() > 8);
+	    
+	    double distance = 0;
+	    double delt = 0;
+	    System.out.print("Lūdzu, ievadiet attālumu no picērijas (0 veikala saņemšanai):");
+	    distance =scan.nextDouble();
+	    if (distance == 0) {
+	    	delt = 0;
+	        System.out.println("Nav nosūtīšanas maksas.");
+	    } else if (distance > 1) {
+	    	delt = ((distance * 0.5) + 2);
+	        System.out.println("Piegādes izmaksas: " + df.format (delt)+"€");
+	    } else if (distance > 0) {
+	    	delt = 2.00;
+	        System.out.println("Piegādes izmaksas: " + df.format (delt)+"€");
+	    }
+	   
+	    System.out.print("Kāda izmēra picu vēlaties? (20, 25, 30 vai 50)");
+	    dm = scan.nextInt();
+	    if (dm == 20) {
+	    	izmaksas = 12.99;
+	    } else if (dm == 25) {
+	    	izmaksas = 14.99;
+	    } else if (dm == 30) {
+	    	izmaksas = 16.99;
+	    } else if (dm == 50) {
+	    	izmaksas = 18.99;
+	    } else if (dm != 20 && dm != 25 && dm != 30 && dm != 50) {
+	        System.out.println("Ievadītais numurs nav derīgs, picas izmērs tiks iestatīts uz 20 cm.");
+	        izmaksas = 12.99;
+	    }
+	   scan.nextLine();
+	   
+	   System.out.print("Kādu mīklu vēlaties picā? (H) Hand-Tossed, (T) Thin-crust, (D) Deep-Dish: ");
+	    tips = scan.nextLine().charAt(0);
+	    if (tips == 'H' || tips == 'h') {
+	    	mikla = "Hand-Tossed";
+	    } else if (tips == 'T' || tips == 't') {
+	    	mikla = "Thin-Crust";
+	    } else if (tips == 'D' || tips == 'd') {
+	    	mikla = "Deep-Dish";
+	    } else if (tips != 'H' && tips != 'h' && tips != 'T' && tips != 't' && tips != 'D' && tips != 'd') {
+	        System.out.println("Ievadītais tips nav derīgs, picas mīkla tiks izvēlēta manuāli");
+	    }
+	    mikla = "Deep-Dish"; 
+	    
+	    System.out.println("Visas picas nāk ar sieru.");
+	    System.out.println("Papildu pildījumi maksā 1,25.");
+	    System.out.print("Vēlaties pepperoni? (N / Y)");
+	    pildijums = scan.nextLine().charAt(0);
+	    if (pildijums == 'Y' || pildijums == 'y') {
+	    	pildijums = 1;
+	        toppings = toppings + " , pepperoni";
+	    } else {
+	    	pildijums = 0;
+	    }
+	    System.out.print("Vēlaties desu? (N / Y)");
+	    pildijums2 = scan.nextLine().charAt(0);
+	    if (pildijums2 == 'y' || pildijums2 == 'Y') {
+	    	pildijums2 = 1;
+	        toppings = toppings + " , desa";
+	    } else {
+	    	pildijums2 = 0;
+	    } 
+	    System.out.print("Vēlaties majonēzi? (N / Y)");
+	    pildijums4 = scan.nextLine().charAt(0);
+	    if (pildijums4 == 'y' || pildijums4 == 'Y') {
+	    	pildijums4 = 1;
+	        toppings = toppings + " , majonēze";
+	    } else {
+	    	pildijums4 = 0;
+	    } 
+	    System.out.print("Vēlaties kečupu? (N / Y)");
+	    pildijums5 = scan.nextLine().charAt(0);
+	    if (pildijums5 == 'y' || pildijums5 == 'Y') {
+	    	pildijums5 = 1;
+	        toppings = toppings + " , kečups";
+	    } else {
+	    	pildijums5 = 0;
+	    } 
+	    System.out.print("Vēlaties sēnes? (N / Y)");
+	    pildijums6 = scan.nextLine().charAt(0);
+	    if (pildijums6 == 'y' || pildijums5 == 'Y') {
+	    	pildijums6 = 1;
+	        toppings = toppings + " , sēnes";
+	    } else {
+	    	pildijums6 = 0;
+	    }
+	    
+	    pildijums3  = (pildijums) + (pildijums2) + (pildijums4) + (pildijums5)+(pildijums6);
+	    kopa = (izmaksas) + (pildijums3 * 1.25) + (delt);
+	    tax = kopa * taxRate;
+	    viss = kopa * ( 1 + taxRate );
 	    
 	    try {
 			FileWriter fw = new FileWriter(nosaukums2, true);
