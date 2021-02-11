@@ -10,11 +10,23 @@ public class Stifurska_pica {
 	static String vards, adrese, talruni,teksts, picasnosaukums, atb,lielums,izvele, maksasanasveids,pica;
 	
 	public static void Izveidot(int a, String nosaukums1) {
+		char k;
+		
 		
 		}
 	
 	public static void Menu(String nosaukums2){
-		
+		String vards,talr,adress,mikla;
+	    char tips;
+	    final double taxRate = 0.08; 
+	    double tax, kopa, viss, izmaksas = 0.0;  
+	    int pildijums = 0,pildijums2 =0,pildijums4 =0,pildijums5 =0,pildijums3,dm, pildijums6=0;
+	    
+	    String toppings = "Siers";
+	    System.out.print("Ievadi savu vardu: ");
+	    vards = scan.next();
+	    System.out.print("Ievadi savu adrese: ");
+	    adress = scan.next();
 	}
 	
 	public static void main(String[] args) {
@@ -32,13 +44,13 @@ public class Stifurska_pica {
 				System.out.println("Pasūtījuma beigās jūs saņemsiet čeku");
 				System.out.println("Visu labu!");
 				
-				System.out.println("Ievadiet pasūtījuma nosaukumu: ");
+				System.out.print("Ievadiet pasūtījuma nosaukumu: ");
 				nosaukums1 = scan.next();
 				
-				System.out.println("Cik daudz klientu vēlas veikt pasūtījumu? ");
+				System.out.print("Cik daudz klientu vēlas veikt pasūtījumu? ");
 				klienti = scan.nextInt();
 				
-				System.out.println("Cik picas vēlaties pasūtīt?");
+				System.out.print("Cik picas vēlaties pasūtīt?");
 				int a = scan.nextInt();
 				scan.close();
 				
@@ -48,7 +60,7 @@ public class Stifurska_pica {
 				}
 			}else if (izvele.equals("MANAPICA")) {
 				
-				System.out.println("Ievadiet pasūtījuma nosaukumu: ");
+				System.out.print("Ievadiet pasūtījuma nosaukumu: ");
 				nosaukums2 = scan.next();
 				
 				Menu(nosaukums2);
