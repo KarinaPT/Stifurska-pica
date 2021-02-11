@@ -1,3 +1,5 @@
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
@@ -12,7 +14,16 @@ public class Stifurska_pica {
 	public static void Izveidot(int a, String nosaukums1) {
 		char k;
 		
-		
+		try{				
+			FileWriter fw = new FileWriter(nosaukums1, true);
+			PrintWriter raksta = new PrintWriter(fw);
+			
+			JOptionPane.showMessageDialog(null, "Teksts ir saglabāts!");
+	}catch(Exception e){
+		JOptionPane.showConfirmDialog(null, "Kļūme ierakstot failā!", "Kļūme!", JOptionPane.ERROR_MESSAGE);
+	}
+	System.out.println();
+	
 		}
 	
 	public static void Menu(String nosaukums2){
@@ -27,6 +38,14 @@ public class Stifurska_pica {
 	    vards = scan.next();
 	    System.out.print("Ievadi savu adrese: ");
 	    adress = scan.next();
+	    
+	    try {
+			FileWriter fw = new FileWriter(nosaukums2, true);
+			PrintWriter raksta = new PrintWriter(fw); 
+			
+	    }catch(Exception e){
+            JOptionPane.showMessageDialog(null, "Kļūme ierakstot failā", "Kļūme!", JOptionPane.ERROR_MESSAGE);
+	    }
 	}
 	
 	public static void main(String[] args) {
