@@ -180,6 +180,11 @@ public class Stifurska_pica {
 	    	pildijums6 = 0;
 	    }
 	    
+	    pildijums3  = (pildijums) + (pildijums2) + (pildijums4) + (pildijums5)+(pildijums6);
+	    kopa = (izmaksas) + (pildijums3 * 1.25) + (delt);
+	    tax = kopa * taxRate;
+	    viss = kopa * ( 1 + taxRate );
+	    
 	    try {
 			FileWriter fw = new FileWriter(nosaukums2, true);
 			PrintWriter raksta = new PrintWriter(fw); 
