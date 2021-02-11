@@ -188,6 +188,21 @@ public class Stifurska_pica {
 	    try {
 			FileWriter fw = new FileWriter(nosaukums2, true);
 			PrintWriter raksta = new PrintWriter(fw); 
+			raksta.println(vards.substring(0,1).toUpperCase()+vards.substring(1,vards.length()) + ",jūsu pasūtījums:");
+		    System.out.println(vards.substring(0,1).toUpperCase()+vards.substring(1,vards.length()) + ",jūsu pasūtījums:");
+		    raksta.println("Picas izmērs: "+dm + " cm pica");
+		    System.out.println("Picas izmērs: "+dm + " cm pica");
+		    raksta.println("Sastāvdaļas: "+mikla + ", " + toppings);
+		    System.out.println("Sastāvdaļas: "+mikla + ", " + toppings);
+		    raksta.println("Pasūtījuma izmaksas: " + df.format(kopa));
+		    System.out.println("Pasūtījuma izmaksas: " + df.format(kopa));
+		    raksta.println("Nodoklis: " + df.format(tax)+"€");
+		    System.out.println("Nodoklis: " + df.format(tax)+"€");
+		    raksta.println("Kopējā summa: " + df.format(viss));
+		    System.out.println("Kopējā summa: " + df.format(viss)+"€");
+		    raksta.println("Jūsu adrese un tālruņa numurs: "+talr+"/"+adress.substring(0,1).toUpperCase()+adress.substring(1,adress.length()));
+		    System.out.println("Jūsu adrese un tālruņa numurs: "+talr+"/"+adress.substring(0,1).toUpperCase()+adress.substring(1,adress.length()));
+		    raksta.close();
 			
 	    }catch(Exception e){
             JOptionPane.showMessageDialog(null, "Kļūme ierakstot failā", "Kļūme!", JOptionPane.ERROR_MESSAGE);
