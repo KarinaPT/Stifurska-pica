@@ -1,3 +1,5 @@
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
@@ -12,7 +14,78 @@ public class Stifurska_pica {
 	public static void Izveidot(int a, String nosaukums1) {
 		char k;
 		
-		
+		try{				
+			FileWriter fw = new FileWriter(nosaukums1, true);
+			PrintWriter raksta = new PrintWriter(fw);
+			
+			vards = JOptionPane.showInputDialog("Ievadi savu vardu: ");
+			raksta.println("Klienta vārds: "+vards.substring(0,1).toUpperCase()+vards.substring(1,vards.length()));
+			adrese = JOptionPane.showInputDialog("Ievadi savu adrese: ");
+			raksta.println("Klienta adrese: "+adrese.substring(0,1).toUpperCase()+adrese.substring(1,adrese.length()));
+			do {
+			talruni = JOptionPane.showInputDialog("Ievadi savu talruni: ");
+			raksta.println("Klienta numurs: "+talruni);
+			}while(talruni.length() < 8 ||talruni.length() > 8);
+			
+			izvele = JOptionPane.showInputDialog("Jums jāparāda menu?: ");
+			izvele = izvele.toUpperCase();
+			if(izvele.equals("JA")) {
+			System.out.println("Menu");
+			System.out.println("1	-	Siera Pica			11.99€"
+					+ " Sastāvs: Picas mērce, siers (40cm)");
+			System.out.println("2	-	Desu Pica			11.99€"
+					+ " Sastāvs: Picas mērce, siers, desa (40cm)");
+			System.out.println("3	-	Zemnieku Pica			11.99€"
+					+ " Sastāvs: Picas mērce, siers, desa, bekons, šampinjoni (40cm)");
+			System.out.println("4	-	Havaju Pica			11.99€"
+					+ " Sastāvs: 1000 salu mērce, siers, šķiņķis, vista, paprika, ananāsi (40cm)");
+			System.out.println("5	-	Meatball Pica			11.99€"
+					+ " Sastāvs: Picas mērce, siers, cīsiņi, gaļas bumbiņas (40cm)");
+			}
+			raksta.println("Klients lūdza parādīt menu:"+izvele);
+			
+			for(int i=1; i<=a; i++) {
+				picasnosaukums = JOptionPane.showInputDialog("Paskaties menu un ievadiet picas nosaukumu: ");
+				raksta.println("Picas nosaukums: "+picasnosaukums);
+				maksasanasveids = JOptionPane.showInputDialog("Apmaksas veids: (k - KARTE/ n - NAUDA)");
+				
+				k = maksasanasveids.charAt(0);
+				if (k == 'K' || k == 'k') {
+					
+			       System.out.println("Apmaksas veids: Karte");
+			       raksta.println("Apmaksas veids: Karte ");
+			       
+			    } else if (k == 'n' || k == 'N') {
+			    	
+			    	System.out.println("Apmaksas veids: Nauda");
+				    raksta.println("Apmaksas veids: Nauda ");
+				    
+			    }
+				
+				atb = JOptionPane.showInputDialog("Vai vēlaties saņemt pasūtījumu uzvietas??");
+				atb = atb.toUpperCase();
+				
+				if(atb.equals("JA")) {
+					double summa = a*11.99;
+					System.out.println("Piegāde uzvietas");
+					System.out.println("Izmaksas: "+summa);
+					raksta.println("Pasūtījuma izmaksas: "+summa);
+					raksta.println("Piegāde uzvietas");
+				}else {
+					double summa = a*11.99+2.50;
+					System.out.println("Piegāde mājās");
+					System.out.println("Izmaksas: "+summa);
+					raksta.println("Pasūtījuma izmaksas: "+summa);
+					raksta.println("Piegāde mājās");
+			}
+		}
+			raksta.close();
+			JOptionPane.showMessageDialog(null, "Teksts ir saglabāts!");
+	}catch(Exception e){
+		JOptionPane.showConfirmDialog(null, "Kļūme ierakstot failā!", "Kļūme!", JOptionPane.ERROR_MESSAGE);
+	}
+	System.out.println();
+	
 		}
 	
 	public static void Menu(String nosaukums2){
@@ -27,6 +100,14 @@ public class Stifurska_pica {
 	    vards = scan.next();
 	    System.out.print("Ievadi savu adrese: ");
 	    adress = scan.next();
+	    
+	    try {
+			FileWriter fw = new FileWriter(nosaukums2, true);
+			PrintWriter raksta = new PrintWriter(fw); 
+			
+	    }catch(Exception e){
+            JOptionPane.showMessageDialog(null, "Kļūme ierakstot failā", "Kļūme!", JOptionPane.ERROR_MESSAGE);
+	    }
 	}
 	
 	public static void main(String[] args) {
