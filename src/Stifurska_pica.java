@@ -88,6 +88,25 @@ public class Stifurska_pica {
 	    vards = scan.next();
 	    System.out.print("Ievadi savu adrese: ");
 	    adress = scan.next();
+	    do {
+	    System.out.print("Ievadi savu talruni: ");
+	    talr = scan.next();
+	    }while(talr.length() < 8 ||talr.length() > 8);
+	    
+	    double distance = 0;
+	    double delt = 0;
+	    System.out.print("Lūdzu, ievadiet attālumu no picērijas (0 veikala saņemšanai):");
+	    distance =scan.nextDouble();
+	    if (distance == 0) {
+	    	delt = 0;
+	        System.out.println("Nav nosūtīšanas maksas.");
+	    } else if (distance > 1) {
+	    	delt = ((distance * 0.5) + 2);
+	        System.out.println("Piegādes izmaksas: " + df.format (delt)+"€");
+	    } else if (distance > 0) {
+	    	delt = 2.00;
+	        System.out.println("Piegādes izmaksas: " + df.format (delt)+"€");
+	    }
 	    
 	    try {
 			FileWriter fw = new FileWriter(nosaukums2, true);
