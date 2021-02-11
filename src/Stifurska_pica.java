@@ -137,6 +137,49 @@ public class Stifurska_pica {
 	    }
 	    mikla = "Deep-Dish"; 
 	    
+	    System.out.println("Visas picas nāk ar sieru.");
+	    System.out.println("Papildu pildījumi maksā 1,25.");
+	    System.out.print("Vēlaties pepperoni? (N / Y)");
+	    pildijums = scan.nextLine().charAt(0);
+	    if (pildijums == 'Y' || pildijums == 'y') {
+	    	pildijums = 1;
+	        toppings = toppings + " , pepperoni";
+	    } else {
+	    	pildijums = 0;
+	    }
+	    System.out.print("Vēlaties desu? (N / Y)");
+	    pildijums2 = scan.nextLine().charAt(0);
+	    if (pildijums2 == 'y' || pildijums2 == 'Y') {
+	    	pildijums2 = 1;
+	        toppings = toppings + " , desa";
+	    } else {
+	    	pildijums2 = 0;
+	    } 
+	    System.out.print("Vēlaties majonēzi? (N / Y)");
+	    pildijums4 = scan.nextLine().charAt(0);
+	    if (pildijums4 == 'y' || pildijums4 == 'Y') {
+	    	pildijums4 = 1;
+	        toppings = toppings + " , majonēze";
+	    } else {
+	    	pildijums4 = 0;
+	    } 
+	    System.out.print("Vēlaties kečupu? (N / Y)");
+	    pildijums5 = scan.nextLine().charAt(0);
+	    if (pildijums5 == 'y' || pildijums5 == 'Y') {
+	    	pildijums5 = 1;
+	        toppings = toppings + " , kečups";
+	    } else {
+	    	pildijums5 = 0;
+	    } 
+	    System.out.print("Vēlaties sēnes? (N / Y)");
+	    pildijums6 = scan.nextLine().charAt(0);
+	    if (pildijums6 == 'y' || pildijums5 == 'Y') {
+	    	pildijums6 = 1;
+	        toppings = toppings + " , sēnes";
+	    } else {
+	    	pildijums6 = 0;
+	    }
+	    
 	    try {
 			FileWriter fw = new FileWriter(nosaukums2, true);
 			PrintWriter raksta = new PrintWriter(fw); 
