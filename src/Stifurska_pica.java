@@ -27,6 +27,23 @@ public class Stifurska_pica {
 			raksta.println("Klienta numurs: "+talruni);
 			}while(talruni.length() < 8 ||talruni.length() > 8);
 			
+			izvele = JOptionPane.showInputDialog("Jums jāparāda menu?: ");
+			izvele = izvele.toUpperCase();
+			if(izvele.equals("JA")) {
+			System.out.println("Menu");
+			System.out.println("1	-	Siera Pica			11.99€"
+					+ " Sastāvs: Picas mērce, siers (40cm)");
+			System.out.println("2	-	Desu Pica			11.99€"
+					+ " Sastāvs: Picas mērce, siers, desa (40cm)");
+			System.out.println("3	-	Zemnieku Pica			11.99€"
+					+ " Sastāvs: Picas mērce, siers, desa, bekons, šampinjoni (40cm)");
+			System.out.println("4	-	Havaju Pica			11.99€"
+					+ " Sastāvs: 1000 salu mērce, siers, šķiņķis, vista, paprika, ananāsi (40cm)");
+			System.out.println("5	-	Meatball Pica			11.99€"
+					+ " Sastāvs: Picas mērce, siers, cīsiņi, gaļas bumbiņas (40cm)");
+			}
+			raksta.println("Klients lūdza parādīt menu:"+izvele);
+			
 			JOptionPane.showMessageDialog(null, "Teksts ir saglabāts!");
 	}catch(Exception e){
 		JOptionPane.showConfirmDialog(null, "Kļūme ierakstot failā!", "Kļūme!", JOptionPane.ERROR_MESSAGE);
