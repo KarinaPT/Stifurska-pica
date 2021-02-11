@@ -18,6 +18,15 @@ public class Stifurska_pica {
 			FileWriter fw = new FileWriter(nosaukums1, true);
 			PrintWriter raksta = new PrintWriter(fw);
 			
+			vards = JOptionPane.showInputDialog("Ievadi savu vardu: ");
+			raksta.println("Klienta vārds: "+vards.substring(0,1).toUpperCase()+vards.substring(1,vards.length()));
+			adrese = JOptionPane.showInputDialog("Ievadi savu adrese: ");
+			raksta.println("Klienta adrese: "+adrese.substring(0,1).toUpperCase()+adrese.substring(1,adrese.length()));
+			do {
+			talruni = JOptionPane.showInputDialog("Ievadi savu talruni: ");
+			raksta.println("Klienta numurs: "+talruni);
+			}while(talruni.length() < 8 ||talruni.length() > 8);
+			
 			JOptionPane.showMessageDialog(null, "Teksts ir saglabāts!");
 	}catch(Exception e){
 		JOptionPane.showConfirmDialog(null, "Kļūme ierakstot failā!", "Kļūme!", JOptionPane.ERROR_MESSAGE);
