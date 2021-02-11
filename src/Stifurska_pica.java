@@ -108,6 +108,22 @@ public class Stifurska_pica {
 	        System.out.println("Piegādes izmaksas: " + df.format (delt)+"€");
 	    }
 	    
+	    System.out.print("Kāda izmēra picu vēlaties? (20, 25, 30 vai 50)");
+	    dm = scan.nextInt();
+	    if (dm == 20) {
+	    	izmaksas = 12.99;
+	    } else if (dm == 25) {
+	    	izmaksas = 14.99;
+	    } else if (dm == 30) {
+	    	izmaksas = 16.99;
+	    } else if (dm == 50) {
+	    	izmaksas = 18.99;
+	    } else if (dm != 20 && dm != 25 && dm != 30 && dm != 50) {
+	        System.out.println("Ievadītais numurs nav derīgs, picas izmērs tiks iestatīts uz 20 cm.");
+	        izmaksas = 12.99;
+	    }
+	   scan.nextLine();
+	    
 	    try {
 			FileWriter fw = new FileWriter(nosaukums2, true);
 			PrintWriter raksta = new PrintWriter(fw); 
