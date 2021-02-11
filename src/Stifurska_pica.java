@@ -53,15 +53,20 @@ public class Stifurska_pica {
 				if (k == 'K' || k == 'k') {
 					
 			       System.out.println("Apmaksas veids: Karte");
-			       raksta.println("Apmaksas veids - Karte ");
+			       raksta.println("Apmaksas veids: Karte ");
 			       
 			    } else if (k == 'n' || k == 'N') {
 			    	
 			    	System.out.println("Apmaksas veids: Nauda");
-				    raksta.println("Apmaksas veids - Nauda ");
+				    raksta.println("Apmaksas veids: Nauda ");
 				    
 			    }
-			}
+				
+				atb = JOptionPane.showInputDialog("Vai vēlaties saņemt pasūtījumu uzvietas??");
+				atb = atb.toUpperCase();
+				
+				
+		}
 			raksta.close();
 			JOptionPane.showMessageDialog(null, "Teksts ir saglabāts!");
 	}catch(Exception e){
