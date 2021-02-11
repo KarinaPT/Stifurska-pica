@@ -107,7 +107,7 @@ public class Stifurska_pica {
 	    	delt = 2.00;
 	        System.out.println("Piegādes izmaksas: " + df.format (delt)+"€");
 	    }
-	    
+	   
 	    System.out.print("Kāda izmēra picu vēlaties? (20, 25, 30 vai 50)");
 	    dm = scan.nextInt();
 	    if (dm == 20) {
@@ -123,6 +123,19 @@ public class Stifurska_pica {
 	        izmaksas = 12.99;
 	    }
 	   scan.nextLine();
+	   
+	   System.out.print("Kādu mīklu vēlaties picā? (H) Hand-Tossed, (T) Thin-crust, (D) Deep-Dish: ");
+	    tips = scan.nextLine().charAt(0);
+	    if (tips == 'H' || tips == 'h') {
+	    	mikla = "Hand-Tossed";
+	    } else if (tips == 'T' || tips == 't') {
+	    	mikla = "Thin-Crust";
+	    } else if (tips == 'D' || tips == 'd') {
+	    	mikla = "Deep-Dish";
+	    } else if (tips != 'H' && tips != 'h' && tips != 'T' && tips != 't' && tips != 'D' && tips != 'd') {
+	        System.out.println("Ievadītais tips nav derīgs, picas mīkla tiks izvēlēta manuāli");
+	    }
+	    mikla = "Deep-Dish"; 
 	    
 	    try {
 			FileWriter fw = new FileWriter(nosaukums2, true);
