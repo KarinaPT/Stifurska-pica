@@ -20,4 +20,4 @@ Viņa palīdz pieņemt pasūtījumus:
 - [ ] Lokāli programmu papildināt ar nelielu jaunu funkcionalitāti. :pencil2:
 - [ ] Izdzēst liekos un neizmantotos zarus un atkārtoti veikt izgrūšanu uz GitHub krātuvi. :pencil2:
 - [ ] Noteiktajā termiņā veikt uzdevumus iesūtīt saiti uz projekta mapi un prezentāciju. :pencil2:
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlgW5GPcTtD2JXqOaZZxryJiUubkmPb5QJ8Q&usqp=CAU">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlgW5GPcTtD2JXqOaZZxryJiUubkmPb5QJ8Q&usqp=CAU" height="181">
