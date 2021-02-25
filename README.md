@@ -2,13 +2,13 @@
 ### Apraksts
 Mana programma tika veidota picērijas darbiniekiem.
 Viņa palīdz pieņemt pasūtījumus:
-1. atcerēsies klienta vārdu, adresi, tālruņa numuru.
-2. parāda cenu par konkrētu pasūtījumu.
-3. lūdz izvēlēties picas izmēru.
-4. jautā, kur pasūtījums būs jāpiegādā.
-5. lūdz izvēlēties papildu pildījumu.
-6. raksta visu pasūtījumu teksta dokumentā.
-7. aprēķina nodokli pēc pasūtījuma.
+1. Atcerēsies klienta vārdu, adresi, tālruņa numuru.
+2. Parāda cenu par konkrētu pasūtījumu.
+3. Lūdz izvēlēties picas izmēru.
+4. Jautā, kur pasūtījums būs jāpiegādā.
+5. Lūdz izvēlēties papildu pildījumu.
+6. Raksta visu pasūtījumu teksta dokumentā.
+7. Aprēķina nodokli pēc pasūtījuma.
 ### :clipboard:*Uzdevumu saraksts:*:clipboard:
 - [x] Izveidot README.md failu lokali :fountain_pen:
 - [x] Izveidot projerkta aprakstu :fountain_pen:
