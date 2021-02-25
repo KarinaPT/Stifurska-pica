@@ -11,10 +11,10 @@ Viņa palīdz pieņemt pasūtījumus:
 7. aprēķina nodokli pēc pasūtījuma.
 ### :clipboard:*Uzdevumu saraksts:*:clipboard:
 - [x] Izveidot README.md failu lokali :fountain_pen:
-- [x] Izveidot projerkta aprakstu :pencil2:
+- [x] Izveidot projerkta aprakstu :fountain_pen:
 - [ ] Ievietot atbilstošu attēlus :pencil2:
-- [x] Izveidot task list :pencil2:
-- [x] Ievietot emociju ikonus :pencil2:
+- [x] Izveidot task list :fountain_pen:
+- [x] Ievietot emociju ikonus :fountain_pen:
 - [ ] Veikt izstrādātās picērijas programmas izgrūšanu (push) uz GitHub krātuvi. :pencil2:
 - [ ] Izgrūžot iekļaut visus projekta zarus (branch) un visus projekta failus. :pencil2:
 - [ ] Lokāli programmu papildināt ar nelielu jaunu funkcionalitāti. :pencil2:
