@@ -4,6 +4,7 @@ import java.text.DecimalFormat;
 import java.util.Scanner;
 
 import javax.swing.JOptionPane;
+import javax.swing.UIManager;
 
 public class Stifurska_pica {
 	
@@ -65,7 +66,16 @@ public class Stifurska_pica {
 				atb = JOptionPane.showInputDialog("Vai vēlaties saņemt pasūtījumu uzvietas??");
 				atb = atb.toUpperCase();
 				
-				
+				 JOptionPane.showMessageDialog(null, "Paldies par pasūtījumu.");
+			        UIManager.put("OptionPane.yesButtonText", "Super");
+			        UIManager.put("OptionPane.noButtonText", "Slikti");
+			        int viedoklis = JOptionPane.showConfirmDialog(null, "Kā Jūs novērtēsiet mūsu apkalpošanu?", "Viedoklis", JOptionPane.YES_NO_OPTION);
+			        if(viedoklis==JOptionPane.YES_OPTION){
+			            JOptionPane.showMessageDialog(null, "Paldies par atsauksmi!");
+			        }if(viedoklis==JOptionPane.NO_OPTION){
+			            JOptionPane.showInputDialog("Paldies!");
+			            JOptionPane.showMessageDialog(null, "");
+			        }
 		}
 			raksta.close();
 			JOptionPane.showMessageDialog(null, "Teksts ir saglabāts!");
@@ -185,6 +195,17 @@ public class Stifurska_pica {
 	    tax = kopa * taxRate;
 	    viss = kopa * ( 1 + taxRate );
 	    
+	    JOptionPane.showMessageDialog(null, "Paldies par pasūtījumu.");
+        UIManager.put("OptionPane.yesButtonText", "Super");
+        UIManager.put("OptionPane.noButtonText", "Slikti");
+        int viedoklis = JOptionPane.showConfirmDialog(null, "Kā Jūs novērtēsiet mūsu apkalpošanu?", "Viedoklis", JOptionPane.YES_NO_OPTION);
+        if(viedoklis==JOptionPane.YES_OPTION){
+            JOptionPane.showMessageDialog(null, "Paldies par atsauksmi!");
+        }if(viedoklis==JOptionPane.NO_OPTION){
+            JOptionPane.showInputDialog("Paldies!");
+            JOptionPane.showMessageDialog(null, "");
+        }
+        
 	    try {
 			FileWriter fw = new FileWriter(nosaukums2, true);
 			PrintWriter raksta = new PrintWriter(fw); 
