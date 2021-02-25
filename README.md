@@ -20,3 +20,4 @@ Viņa palīdz pieņemt pasūtījumus:
 - [ ] Lokāli programmu papildināt ar nelielu jaunu funkcionalitāti. :pencil2:
 - [ ] Izdzēst liekos un neizmantotos zarus un atkārtoti veikt izgrūšanu uz GitHub krātuvi. :pencil2:
 - [ ] Noteiktajā termiņā veikt uzdevumus iesūtīt saiti uz projekta mapi un prezentāciju. :pencil2:
+<img src="pica.jpg" alt="">
